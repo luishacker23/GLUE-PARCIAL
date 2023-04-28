@@ -32,7 +32,8 @@ jobs:
           source env/bin/activate
           pip install -r requirements.txt
           pytest
-      
-
-  
-          
+      - name: Execute flake8 test
+        run: |
+          pip install flake8
+          flake8 scraperBigData/scraperBigDatar.py
+          flake8 pruebaParcial/pruebaParcial.py
